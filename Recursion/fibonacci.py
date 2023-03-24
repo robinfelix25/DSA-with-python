@@ -21,6 +21,13 @@ def fibnocci_recur(n):
     if n in [0, 1]:
         return n
     else:
-        return fibnocci_recur(n-2) + fibnocci_recur(n-1)
+        # trend = fibnocci_recur(n-2) + fibnocci_recur(n-1)
+        first = fibnocci_recur(n-2)
+        second = fibnocci_recur(n-1)
+        print(first, second)
+        trend = first + second
+        print(trend, end = " ")
+        return trend
     
-print(fibnocci_recur(4))
+# print(fibnocci_recur(4))
+fibnocci_recur(4)
