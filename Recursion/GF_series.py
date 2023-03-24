@@ -1,6 +1,8 @@
-
+"""
 #TODO: Need to figure out is it possible to print out all output of recursion?
-
+#TODO: Need to try out this discord answer 
+https://discord.com/channels/788914859235606558/788915465597485069/1088763696030961684
+"""
 def gfseries(n):
     if n == 1:
         return 0
