@@ -22,12 +22,7 @@ def fibnocci_recur(n):
         return n
     else:
         # trend = fibnocci_recur(n-2) + fibnocci_recur(n-1)
-        first = fibnocci_recur(n-2)
-        second = fibnocci_recur(n-1)
-        print(first, second)
-        trend = first + second
-        print(trend, end = " ")
+        trend = fibnocci_recur(n-2) + fibnocci_recur(n-1)
         return trend
     
-# print(fibnocci_recur(4))
-fibnocci_recur(4)
+print(fibnocci_recur(4))
