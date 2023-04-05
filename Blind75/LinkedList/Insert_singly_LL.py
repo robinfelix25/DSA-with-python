@@ -15,7 +15,8 @@ class SLinkedList:
         self.head = None
         self.tail = None
     
-    def printll(self, start):
+    def printll(self):
+        start = self.head
         while start != None:
             print(str(start.value) , end="->")
             start = start.next
@@ -64,6 +65,6 @@ sl.insertstart(1)
 sl.insertend(2)
 sl.insertend(3)
 sl.insertmiddle(4,3)
-sl.printll(sl.head)
+sl.printll()
 
 
