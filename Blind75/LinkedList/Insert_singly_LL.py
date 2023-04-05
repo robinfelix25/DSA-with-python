@@ -1,7 +1,8 @@
 
 
 """
-My own implemented of linked list not sure its bug free :-)
+My own implemented of Singly linked list not sure its bug free :-)
+revisit
 """
 class Node:
     def __init__(self, value=None):
