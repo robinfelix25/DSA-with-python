@@ -17,7 +17,7 @@ def components(graph):
     for k in graph:
         if k not in visited:
             long = dfs(graph, k)
-            print(long)
+            # print(long)
             max_len = max(max_len, long)
             
     return max_len

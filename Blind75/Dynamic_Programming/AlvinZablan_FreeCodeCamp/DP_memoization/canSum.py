@@ -38,3 +38,4 @@ target = 7
 
 print(cansum(7, [5,3,4,7]))
 print(cansum(300, [7, 14]))
+print(cansum(10000, [5,3,4]))

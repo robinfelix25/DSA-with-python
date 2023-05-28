@@ -90,6 +90,28 @@
 #             "f" : ["d", "e"]
 #                }
 
+
+
+def longest(graph):
+    visited = set()
+    max_long = 0
+    def dfs(graph, node):
+        if node in visited:
+            return False
+        
+        visited.add(node)
+        length = 1
+        for nei in graph[node]:
+            length += dfs(graph, nei)
+    
+        return length
+    
+    for k in graph:
+        if k not in visited:
+            long = dfs(graph, k)
+            max_long = max(long, max_long)
+    return max_long
+
 graph = {
     0 : [8,1,5],
     1 : [0],
@@ -100,13 +122,4 @@ graph = {
     4 : [3, 2]
 }
 
-def length(graph):
-    if n%2 == 0:
-        return 0
-    count = 1
-    for n in l1:
-        count += length(n)
-
-    return count
-
-print(length(3))
+print(longest(graph))
