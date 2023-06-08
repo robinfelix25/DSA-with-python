@@ -64,10 +64,34 @@ def minCoin(coins, amount):
 # amount = 11
 # print(coinChange(coins, amount))
 
+def minCoin_try(coins,amount):
+    res = float("inf")
+    def dfs(target, cur, memo = {}):
+        nonlocal res
+        if target in memo:
+            return memo[target]
+        if target == amount:
+            res = min(res, len(cur))
+            return res
+        if target > amount:
+            return 0
+        
+        for i in range(len(coins)):
+            ret = dfs(target + coins[i], cur + [coins[i]], memo)
+            memo[target] = ret
+            print(memo)
+        return ret
+        
+
+    dfs(0, [])
+    return res if res != float("inf") else -1
 
 coins = [1,3,4,5]
 amount = 7
-print(minCoin_memo(coins, amount))
+print(minCoin_try(coins, amount))
+
+# amount = 11
+print(minCoin_try(coins, amount))
 
 # coins = [2]
 # amount = 3

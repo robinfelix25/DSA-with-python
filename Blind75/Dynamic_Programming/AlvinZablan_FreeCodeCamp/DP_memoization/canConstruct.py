@@ -35,3 +35,4 @@ def canconstruct(target, words, memo= {}):
 
 print(canconstruct('abcdef',['ab','abc','cd','def','abcd']))
 print(canconstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef',['ee','eee','eeee','eeeee','eeeeeee']))
+print(canconstruct_sol1('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef',['ee','eee','eeee','eeeee','eeeeeee']))
