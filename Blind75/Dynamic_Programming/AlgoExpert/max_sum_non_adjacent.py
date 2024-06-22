@@ -31,3 +31,17 @@ def maxSubsetSumNoAdjacent_sol2(array):
 array = [75, 105,120,75,90,135] # 75+120+135
 print(maxSubsetSumNoAdjacent_sol1(array))
 print(maxSubsetSumNoAdjacent_sol2(array))
+
+
+def maxSubsetSumNoAdjacent_sol3(array):
+    first, sec = 0, 0
+
+    for n in array:
+        temp = max(n + sec, first)
+        sec = first
+        first = temp
+
+    return first
+
+print(maxSubsetSumNoAdjacent_sol3(array))
+    
